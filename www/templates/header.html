@@ -1,3 +1,4 @@
+{{ define "header" }}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,36 +23,4 @@
               </nav>
             </div>
           </header>
-        
-          <main class="px-3">
-            <h1>Главная страница</h1>
-            <p class="lead">Пользователь: {{ .Name }}<br>Возраст: {{ .Age }}<br>Деньги: {{ .Money }}</p>
-            {{ if gt .Age 20}}
-            <p class="lead">Ну привет!</p>
-            {{ else }}
-            <p class="lead">А ты кто?</p>
-            {{ end }}
-
-            {{ range .Hobbies }}
-            <p class="lead"><b>{{ . }}</b></p>
-            {{ else }}
-            <p class="lead"><b>У нас нет записей</b></p>
-            {{ end }}
-    
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-secondary fw-bold border-black bg-black">Узнать больше</a>
-            </p>
-          </main>
-        
-          <footer class="mt-auto text-white-50">
-            <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-          </footer>
-        </div>
-        
-        
-            
-          
-        
-        </body>
-</body>
-</html>
+          {{ end }}
