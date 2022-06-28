@@ -16,13 +16,16 @@ func index(w http.ResponseWriter, r *http.Request) {
 	t.ExecuteTemplate(w, "index", nil)
 }
 
-func handleFunc() {
-	//Функция отслеживания страницы
-	http.HandleFunc("/", index)
-	//Данный метод позволяет нам вызвать определенный сервер
-	http.ListenAndServe(":8080", nil)
-}
+// func handleFunc() {
+// 	//Функция отслеживания страницы
+// 	http.HandleFunc("/", index)
+// 	//Данный метод позволяет нам вызвать определенный сервер
+// 	http.ListenAndServe(":8080", nil)
+// }
 
 func main (
-	handleFunc()
+		//Функция отслеживания страницы
+		http.HandleFunc("/", index)
+		//Данный метод позволяет нам вызвать определенный сервер
+		http.ListenAndServe(":8080", nil)
 )
