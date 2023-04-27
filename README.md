@@ -1,1 +1,2 @@
-# go-site
+# Сайт на Go с HTML, CSS
+
